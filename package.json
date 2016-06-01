@@ -1,0 +1,39 @@
+{
+  "name": "tap-markdown",
+  "version": "0.0.0",
+  "description": "Consume TAP, produce markdown.",
+  "bin": {
+    "tap-markdown": "bin/cmd.js"
+  },
+  "files": [
+    "bin"
+  ],
+  "scripts": {
+    "test": "xo && npm run example",
+    "example": "node ./example/test.js | ./bin/cmd.js || echo $?"
+  },
+  "keywords": [
+    "tap",
+    "test",
+    "markdown",
+    "reporter"
+  ],
+  "author": "J. Harshbarger",
+  "license": "MIT",
+  "dependencies": {
+    "tap-summary": "^2.1.0"
+  },
+  "devDependencies": {
+    "tape": "^4.5.1",
+    "xo": "^0.15.1"
+  },
+  "xo": {
+    "space": 2,
+    "envs": [
+      "node"
+    ],
+    "ignores": [
+      "example/**/*.js"
+    ]
+  }
+}
