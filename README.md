@@ -4,8 +4,7 @@ Consume TAP, produce markdown.
 ## Usage
 
 ```javascript
-var reporter = require('tap-summary')()
-
+var reporter = require('tap-markdown')()
 ```
 
 or in `package.json`
