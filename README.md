@@ -1,4 +1,4 @@
-# tap-summary
+# tap-markdown
 Consume TAP, produce markdown.
 
 ## Usage
@@ -13,7 +13,7 @@ or in `package.json`
 ```json
 {
   "scripts": {
-    "test": "tape test/*.js | tap-summary"
+    "test": "tape test/*.js | tap-markdown"
   }
 }
 ```
