@@ -1,6 +1,6 @@
 {
   "name": "tap-markdown",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Consume TAP, produce markdown.",
   "bin": {
     "tap-markdown": "bin/cmd.js"
