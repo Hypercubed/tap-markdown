@@ -35,5 +35,17 @@
     "ignores": [
       "example/**/*.js"
     ]
-  }
+  },
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hypercubed/tap-markdown.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hypercubed/tap-markdown/issues"
+  },
+  "homepage": "https://github.com/Hypercubed/tap-markdown#readme"
 }
