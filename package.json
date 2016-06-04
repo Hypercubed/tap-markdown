@@ -10,7 +10,8 @@
   ],
   "scripts": {
     "test": "xo && npm run example",
-    "example": "node ./example/test.js | ./bin/cmd.js || echo $?"
+    "example": "node ./example/test.js | ./bin/cmd.js || echo $?",
+    "version": "chg release -y && git add -A CHANGELOG.md"
   },
   "keywords": [
     "tap",
@@ -21,7 +22,9 @@
   "author": "J. Harshbarger",
   "license": "MIT",
   "dependencies": {
-    "tap-summary": "^2.1.0"
+    "concat-stream": "^1.5.1",
+    "tap-summary": "^2.1.0",
+    "tidy-markdown": "^2.0.3"
   },
   "devDependencies": {
     "tape": "^4.5.1",
