@@ -1,10 +1,18 @@
 # tap-markdown
 Consume TAP, produce markdown.
 
+[![version](https://img.shields.io/npm/v/tap-markdown.svg)](https://www.npmjs.org/package/tap-markdown)
+[![dependencies](https://david-dm.org/Hypercubed/tap-markdown.svg)](https://david-dm.org/Hypercubed/tap-markdown)
+[![devDependencies](https://david-dm.org/Hypercubed/tap-markdown/dev-status.svg)](https://david-dm.org/Hypercubed/tap-markdown#info=devDependencies)
+
+## Install
+
+npm install tap-markdown -g
+
 ## Usage
 
-```javascript
-var reporter = require('tap-markdown')()
+```sh
+tape test/*.js | tap-markdown
 ```
 
 or in `package.json`
@@ -23,11 +31,12 @@ or in `package.json`
   --ansi           Enable ANSI formatting
   --progress       Enable progress output during tests
   --no-markdown    Disable markdown formatting
+  --no-tidy        Disable tidy-markdown
 ```
 
 ## Acknowledgments
 
-This TAP consumer is a thin wrapper around [zoubin/tap-summary](https://github.com/zoubin/tap-summary).  The only difference at the moment is this consumer defaults to no-ansi, no-progress, and markdown output.  This is idea for sending test results to a markdown file.
+This TAP consumer is a thin wrapper around [zoubin/tap-summary](https://github.com/zoubin/tap-summary) and [tidy-markdown](https://github.com/slang800/tidy-markdown).  The only difference at the moment is this consumer defaults to no-ansi, no-progress, and tidy markdown output.  This is ideal for sending test results to a markdown file.
 
 ## License
 
