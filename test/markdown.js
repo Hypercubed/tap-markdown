@@ -15,10 +15,10 @@ markdown.Formatter.prototype.prettifyError = function (assertion) {
 
 function tapTest(fixture) {
   test(fixture, function (t) {
-    fs.createReadStream(fixtures(`${fixture}.tap`))
+    fs.createReadStream(fixtures(fixture + '.tap'))
       .pipe(markdown({duration: false}))
       .pipe(concat({encoding: 'string'}, function (s) {
-        fs.readFile(fixtures(`${fixture}.expected`), 'utf8', function (err, data) {
+        fs.readFile(fixtures(fixture + '.expected'), 'utf8', function (err, data) {
           if (err) {
             throw err;
           }
