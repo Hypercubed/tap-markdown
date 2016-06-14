@@ -9,7 +9,7 @@
     "bin"
   ],
   "scripts": {
-    "test": "xo && npm run example",
+    "test": "xo && tape test/*.js && npm run example",
     "example": "node ./example/test.js | ./bin/cmd.js || echo $?",
     "version": "chg release -y && git add -A CHANGELOG.md"
   },
@@ -23,7 +23,9 @@
   "license": "MIT",
   "dependencies": {
     "concat-stream": "^1.5.1",
-    "tap-summary": "^2.1.0",
+    "figures": "^1.7.0",
+    "pretty-ms": "^2.1.0",
+    "tap-summary": "^3.0.0",
     "tidy-markdown": "^2.0.3"
   },
   "devDependencies": {

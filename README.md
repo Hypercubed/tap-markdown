@@ -28,9 +28,6 @@ or in `package.json`
 ### CLI Options
 
 ```
-  --ansi           Enable ANSI formatting
-  --progress       Enable progress output during tests
-  --no-markdown    Disable markdown formatting
   --no-tidy        Disable tidy-markdown
 ```
 
