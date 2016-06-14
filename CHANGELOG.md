@@ -2,6 +2,10 @@ CHANGELOG
 =========
 
 ## HEAD (Unreleased)
-_(none)_
 
 --------------------
+* Moved markdown formmater from tap-summary to tap-markdown
+
+--------------------
+
+undefined

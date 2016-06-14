@@ -7,7 +7,8 @@ var opts = minimist(process.argv.slice(2), {
     tidy: 't'
   },
   default: {
-    tidy: true
+    tidy: true,
+    duration: true
   }
 });
 
@@ -24,7 +25,7 @@ if (opts.tidy) {
   });
 }
 
-var reporter = require('..')();
+var reporter = require('..')(opts);
 process.stdin
   .pipe(reporter)
   .pipe(destination);

@@ -2,6 +2,7 @@
 Consume TAP, produce markdown.
 
 [![version](https://img.shields.io/npm/v/tap-markdown.svg)](https://www.npmjs.org/package/tap-markdown)
+[![status](https://travis-ci.org/Hypercubed/tap-markdown.svg)](https://travis-ci.org/Hypercubed/tap-markdown)
 [![dependencies](https://david-dm.org/Hypercubed/tap-markdown.svg)](https://david-dm.org/Hypercubed/tap-markdown)
 [![devDependencies](https://david-dm.org/Hypercubed/tap-markdown/dev-status.svg)](https://david-dm.org/Hypercubed/tap-markdown#info=devDependencies)
 
