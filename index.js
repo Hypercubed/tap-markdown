@@ -58,32 +58,31 @@ Formatter.prototype.summary = function (summary) {
 Formatter.prototype.comment = function (comments) {
   var output = [LF];
   output.push('# Comments');
-  output.push('```');
+  // output.push('```');  TODO: make this an option?
   output.push(Object.keys(comments).map(function (name) {
-    return '# ' + name + LF + comments[name].join(LF);
+    return '## ' + name + LF + comments[name].join(LF);
   }).join(LF + LF));
-  output.push('```');
+  // output.push('```');
   return output.join(LF);
 };
 
 Formatter.prototype.fail = function (fail) {
   var output = [LF];
   output.push(('# Fails'));
-  output.push('```');
+  // output.push('```');
   output.push(Object.keys(fail).map(function (name) {
-    var res = ['# ' + name];
+    var res = ['## ' + name];
     fail[name].forEach(function (assertion) {
-      res.push('  ' + symbols.cross + ' ' + assertion.name);
+      res.push('    ' + symbols.cross + ' ' + assertion.name);
       res.push(this.prettifyError(assertion));
     }, this);
     return res.join(LF);
   }, this).join(LF + LF));
 
-  output.push('```');
+  // output.push('```');
   return output.join(LF);
 };
 
 Formatter.prototype.prettifyError = function (assertion) {
   return assertion.error.raw;
 };
-

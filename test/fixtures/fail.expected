@@ -10,17 +10,14 @@
 - fail: 2
 
 # Fails
-```
-# fail
-  ✖ should fail
+## fail
+    ✖ should fail
     operator: ok
     expected: true
     actual:   false
 
-# pass and fail
-  ✖ should fail
+## pass and fail
+    ✖ should fail
     operator: ok
     expected: true
     actual:   false
-```
-
