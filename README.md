@@ -26,6 +26,23 @@ or in `package.json`
 }
 ```
 
+## Example output
+
+```md
+# Tests
+
+- ✔ t.plan [pass: 1, fail: 0, duration: 0ms]
+- ✔ t.end [pass: 2, fail: 0, duration: 3ms]
+
+# Summary
+
+- duration: 3ms
+- planned: 3
+- assertions: 3
+- pass: 3
+- fail: 0
+```
+
 ### CLI Options
 
 ```
