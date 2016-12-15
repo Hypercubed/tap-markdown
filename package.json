@@ -1,36 +1,49 @@
 {
   "name": "tap-markdown",
-  "version": "1.1.1",
   "description": "Consume TAP, produce markdown.",
+  "version": "1.2.1",
+  "author": "J. Harshbarger",
   "bin": {
     "tap-markdown": "bin/cmd.js"
   },
-  "files": [
-    "bin"
-  ],
-  "scripts": {
-    "test": "xo && tape test/*.js",
-    "example": "node ./example/test.js | ./bin/cmd.js || echo $?",
-    "version": "chg release -y && git add -A CHANGELOG.md"
+  "bugs": {
+    "url": "https://github.com/Hypercubed/tap-markdown/issues"
   },
-  "keywords": [
-    "tap",
-    "test",
-    "markdown",
-    "reporter"
-  ],
-  "author": "J. Harshbarger",
-  "license": "MIT",
   "dependencies": {
     "concat-stream": "^1.5.1",
     "figures": "^1.7.0",
+    "minimist": "^1.2.0",
     "pretty-ms": "^2.1.0",
     "tap-summary": "^3.0.0",
     "tidy-markdown": "^2.0.3"
   },
   "devDependencies": {
     "tape": "^4.5.1",
-    "xo": "^0.15.1"
+    "xo": "*"
+  },
+  "directories": {
+    "example": "example"
+  },
+  "files": [
+    "bin"
+  ],
+  "homepage": "https://github.com/Hypercubed/tap-markdown#readme",
+  "keywords": [
+    "markdown",
+    "reporter",
+    "tap",
+    "test"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hypercubed/tap-markdown.git"
+  },
+  "scripts": {
+    "example": "node ./example/test.js | ./bin/cmd.js || echo $?",
+    "test": "xo && tape test/*.js",
+    "version": "chg release -y && git add -A CHANGELOG.md"
   },
   "xo": {
     "space": 2,
@@ -40,17 +53,5 @@
     "ignores": [
       "example/**/*.js"
     ]
-  },
-  "main": "index.js",
-  "directories": {
-    "example": "example"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Hypercubed/tap-markdown.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Hypercubed/tap-markdown/issues"
-  },
-  "homepage": "https://github.com/Hypercubed/tap-markdown#readme"
+  }
 }
