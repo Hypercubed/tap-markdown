@@ -26,6 +26,7 @@ if (opts.tidy) {
 }
 
 var reporter = require('..')(opts);
+
 process.stdin
   .pipe(reporter)
   .pipe(destination);

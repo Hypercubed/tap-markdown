@@ -1,6 +1,7 @@
 var reporter = require('tap-summary').reporter;
 var symbols = require('figures');
 var prettyMs = require('pretty-ms');
+
 var LF = '\n';
 
 module.exports = function (opts) {
