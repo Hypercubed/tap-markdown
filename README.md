@@ -10,6 +10,9 @@ Consume TAP, produce markdown.
 
     npm install tap-markdown
 
+> If you must support Node < 4 you can explicitly install older version of tap-markdown by running the following `npm install tap-markdown@1.2.1`
+
+
 ## Usage
 
 ```sh
