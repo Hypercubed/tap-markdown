@@ -15,18 +15,15 @@
 
 ## fail
 
-```
-✖ should fail
-operator: ok
-expected: true
-actual:   false
-```
+    ✖ should fail
+    operator: ok
+    expected: true
+    actual:   false
 
 ## pass and fail
 
-```
-✖ should fail
-operator: ok
-expected: true
-actual:   false
-```
+    ✖ should fail
+    operator: ok
+    expected: true
+    actual:   false
+
