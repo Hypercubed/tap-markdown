@@ -16,7 +16,7 @@ Consume TAP, produce markdown.
 ## Usage
 
 ```sh
-tape test/*.js | tap-markdown > results.md
+tape test/*.js | tap-markdown
 ```
 
 or in `package.json`

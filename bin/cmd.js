@@ -3,8 +3,13 @@ var minimist = require('minimist');
 
 var opts = minimist(process.argv.slice(2), {
   boolean: true,
+  alias: {
+      d: 'duration',
+      f: 'fence'
+  },
   default: {
-    duration: true
+    duration: true,
+    fence: false
   }
 });
 

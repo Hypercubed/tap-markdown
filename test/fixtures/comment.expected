@@ -14,9 +14,13 @@
 
 ## sync
 
-    Hello,
+```
+Hello,
+```
 
 ## async
 
-    world!
+```
+world!
+```
 
