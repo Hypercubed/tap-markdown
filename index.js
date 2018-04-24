@@ -1,7 +1,9 @@
 var reporter = require('tap-summary').reporter;
 var symbols = require('figures');
 var prettyMs = require('pretty-ms');
+
 var LF = '\n';
+var fence = '';
 
 module.exports = function (opts) {
   return new Formatter(opts).init(reporter());
@@ -10,12 +12,16 @@ module.exports.Formatter = Formatter;
 
 function Formatter(opts) {
   this.needDuration = !(opts && opts.duration === false);
-}
+  this.needFencing = !(opts && opts.fence === false);
+  if(this.needFencing) {
+    fence = '```';
+  };
+};
 
 Formatter.prototype.init = function (output) {
   var self = this;
 
-  output.push('# Tests');
+  output.push('# Tests' + LF);
 
   output.on('test.end', function (test) {
     this.push(self.test(test));
@@ -44,7 +50,7 @@ Formatter.prototype.test = function (test) {
 
 Formatter.prototype.summary = function (summary) {
   var output = [LF];
-  output.push('# Summary');
+  output.push('# Summary' + LF);
   if (this.needDuration) {
     output.push('- duration: ' + prettyMs(summary.duration));
   }
@@ -57,32 +63,27 @@ Formatter.prototype.summary = function (summary) {
 
 Formatter.prototype.comment = function (comments) {
   var output = [LF];
-  output.push('# Comments');
-  // output.push('```');  TODO: make this an option?
+  output.push('# Comments' + LF);
   output.push(Object.keys(comments).map(function (name) {
-    return '## ' + name + LF + comments[name].join(LF);
+    return '## ' + name + LF + LF + fence + LF + comments[name].join(LF).replace('    ','') + LF + fence;
   }).join(LF + LF));
-  // output.push('```');
   return output.join(LF);
 };
 
 Formatter.prototype.fail = function (fail) {
   var output = [LF];
-  output.push(('# Fails'));
-  // output.push('```');
+  output.push(('# Fails' + LF));
   output.push(Object.keys(fail).map(function (name) {
-    var res = ['## ' + name];
+    var res = ['## ' + name + LF + LF +fence];
     fail[name].forEach(function (assertion) {
-      res.push('    ' + symbols.cross + ' ' + assertion.name);
-      res.push(this.prettifyError(assertion));
+      res.push(symbols.cross + ' ' + assertion.name);
+      res.push("operator: " + assertion.error.operator);
+      res.push("expected: " + assertion.error.expected);
+      res.push("actual:   " + assertion.error.actual);
     }, this);
+    res.push(fence);
     return res.join(LF);
   }, this).join(LF + LF));
-
-  // output.push('```');
   return output.join(LF);
 };
 
-Formatter.prototype.prettifyError = function (assertion) {
-  return assertion.error.raw;
-};

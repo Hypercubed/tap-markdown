@@ -8,7 +8,10 @@ Consume TAP, produce markdown.
 
 ## Install
 
-npm install tap-markdown -g
+    npm install tap-markdown
+
+> If you must support Node < 4 you can explicitly install older version of tap-markdown by running the following `npm install tap-markdown@1.2.1`
+
 
 ## Usage
 
@@ -21,7 +24,7 @@ or in `package.json`
 ```json
 {
   "scripts": {
-    "test": "tape test/*.js | tap-markdown"
+    "test": "tape test/*.js | tap-markdown > results.md"
   }
 }
 ```
@@ -43,15 +46,17 @@ or in `package.json`
 - fail: 0
 ```
 
-### CLI Options
+### CLI Options	
+	
+```	
+  --duration       Disable duration
+  --fence          Enable fencing      
+```	
 
-```
-  --no-tidy        Disable tidy-markdown
-```
 
 ## Acknowledgments
 
-This TAP consumer is a thin wrapper around [zoubin/tap-summary](https://github.com/zoubin/tap-summary) and [tidy-markdown](https://github.com/slang800/tidy-markdown).  The only difference at the moment is this consumer defaults to no-ansi, no-progress, and tidy markdown output.  This is ideal for sending test results to a markdown file.
+This TAP consumer is a thin wrapper around [zoubin/tap-summary](https://github.com/zoubin/tap-summary).  The only difference at the moment is this consumer defaults to no-ansi and no-progress output. This is ideal for sending test results to a markdown file.
 
 ## License
 

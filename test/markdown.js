@@ -3,7 +3,6 @@ var path = require('path');
 var test = require('tape');
 var markdown = require('..');
 var concat = require('concat-stream');
-var tidyMarkdown = require('tidy-markdown');
 
 var fixtures = path.resolve.bind(path, __dirname, 'fixtures');
 
@@ -22,7 +21,7 @@ function tapTest(fixture) {
           if (err) {
             throw err;
           }
-          t.equal(tidyMarkdown(s), data);
+          t.equal(s, data);
           t.end();
         });
       }));
