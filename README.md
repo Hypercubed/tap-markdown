@@ -46,6 +46,14 @@ or in `package.json`
 - fail: 0
 ```
 
+### CLI Options	
+	
+```	
+  --duration       Disable duration
+  --fence          Enable fencing      
+```	
+
+
 ## Acknowledgments
 
 This TAP consumer is a thin wrapper around [zoubin/tap-summary](https://github.com/zoubin/tap-summary).  The only difference at the moment is this consumer defaults to no-ansi and no-progress output. This is ideal for sending test results to a markdown file.
