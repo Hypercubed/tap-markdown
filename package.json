@@ -27,7 +27,7 @@
     "minimist": "^1.2.0",
     "pretty-ms": "^2.1.0",
     "tap-summary": "^3.0.0",
-    "tidy-markdown": "^2.0.3"
+    "tidy-markdown": "2.0.4"
   },
   "devDependencies": {
     "tape": "^4.5.1",
